@@ -7,6 +7,7 @@
 //
 
 #import "SPTInitialViewController.h"
+#import "SPTDirectionViewController.h"
 
 @interface SPTInitialViewController ()
 
@@ -33,6 +34,8 @@
     [self.numberTextField becomeFirstResponder];
 }
 
+#pragma mark - IBAction Methods
+
 - (IBAction)searchPressed:(id)sender
 {
     if ([self.numberTextField.text isEqualToString:@""])
@@ -46,4 +49,17 @@
         [self performSegueWithIdentifier:@"toDirectionViewController" sender:self];
     }
 }
+
+#pragma mark - Segue Methods
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue destinationViewController] isKindOfClass:[SPTDirectionViewController class]])
+    {
+        SPTDirectionViewController *destinationController = (SPTDirectionViewController *)[segue destinationViewController];
+        [destinationController setLineType:self.transportSegmentControl.selectedSegmentIndex];
+        [destinationController setLineNumber:self.numberTextField.text];
+    }
+}
+
 @end
