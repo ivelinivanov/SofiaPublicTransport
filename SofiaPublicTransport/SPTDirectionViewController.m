@@ -7,6 +7,7 @@
 //
 
 #import "SPTDirectionViewController.h"
+#import "SPTUpdateManager.h"
 
 @interface SPTDirectionViewController ()
 
@@ -14,10 +15,15 @@
 
 @implementation SPTDirectionViewController
 
+#pragma mark - View Lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    [SPTUpdateManager getListOfStationsForLine:self.lineNumber type:self.lineType completion:^(NSArray *list) {
+        
+    }];
 }
 
 @end

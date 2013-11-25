@@ -60,6 +60,7 @@
 		1C4C7E541843E6FA00138541 /* SofiaPublicTransportTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SofiaPublicTransportTests.m; sourceTree = "<group>"; };
 		1C4C7E5E1843E7F900138541 /* SPTInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTInitialViewController.h; sourceTree = "<group>"; };
 		1C4C7E5F1843E7F900138541 /* SPTInitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTInitialViewController.m; sourceTree = "<group>"; };
+		1CBB9D621843F6530045C8A0 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		1CD723F91843EE71006D7D94 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
 		1CD723FA1843EE71006D7D94 /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
 		1CD723FB1843EE71006D7D94 /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
@@ -130,6 +131,7 @@
 			children = (
 				1C4C7E381843E6FA00138541 /* SPTAppDelegate.h */,
 				1C4C7E391843E6FA00138541 /* SPTAppDelegate.m */,
+				1CBB9D621843F6530045C8A0 /* Constants.h */,
 				1CD723FF1843EE81006D7D94 /* Model */,
 				1CD724001843EE8B006D7D94 /* View */,
 				1CD724011843EE96006D7D94 /* Controller */,

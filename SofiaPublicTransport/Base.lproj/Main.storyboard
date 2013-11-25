@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="617" y="81"/>
         </scene>
-        <!--View Controller - Посока-->
+        <!--Direction View Controller - Посока-->
         <scene sceneID="7UV-tD-xEr">
             <objects>
-                <viewController id="2gW-fi-5ub" sceneMemberID="viewController">
+                <viewController id="2gW-fi-5ub" customClass="SPTDirectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qph-6I-cYS"/>
                         <viewControllerLayoutGuide type="bottom" id="zei-8Z-oIQ"/>

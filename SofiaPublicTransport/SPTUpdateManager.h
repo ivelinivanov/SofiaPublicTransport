@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Constants.h"
 
 @interface SPTUpdateManager : NSObject
+
++ (void)getListOfStationsForLine:(NSString *)line type:(NSUInteger)type completion:(void(^)(NSArray *list))completion;
 
 @end
