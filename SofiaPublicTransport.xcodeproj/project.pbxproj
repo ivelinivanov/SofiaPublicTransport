@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C2607301843F3C200466172 /* SPTUpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C26072F1843F3C200466172 /* SPTUpdateManager.m */; };
 		1C4C7E2A1843E6FA00138541 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4C7E291843E6FA00138541 /* Foundation.framework */; };
 		1C4C7E2C1843E6FA00138541 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4C7E2B1843E6FA00138541 /* CoreGraphics.framework */; };
 		1C4C7E2E1843E6FA00138541 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4C7E2D1843E6FA00138541 /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C26072E1843F3C200466172 /* SPTUpdateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTUpdateManager.h; sourceTree = "<group>"; };
+		1C26072F1843F3C200466172 /* SPTUpdateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTUpdateManager.m; sourceTree = "<group>"; };
 		1C4C7E261843E6FA00138541 /* SofiaPublicTransport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SofiaPublicTransport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C4C7E291843E6FA00138541 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1C4C7E2B1843E6FA00138541 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -180,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				1CD723F81843EE5C006D7D94 /* HTML Parser */,
+				1C26072E1843F3C200466172 /* SPTUpdateManager.h */,
+				1C26072F1843F3C200466172 /* SPTUpdateManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C2607301843F3C200466172 /* SPTUpdateManager.m in Sources */,
 				1CD724041843EFD0006D7D94 /* SPTDirectionViewController.m in Sources */,
 				1CD723FD1843EE71006D7D94 /* HTMLNode.m in Sources */,
 				1C4C7E3A1843E6FA00138541 /* SPTAppDelegate.m in Sources */,
