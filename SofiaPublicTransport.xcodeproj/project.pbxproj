@@ -21,6 +21,8 @@
 		1C4C7E531843E6FA00138541 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C4C7E511843E6FA00138541 /* InfoPlist.strings */; };
 		1C4C7E551843E6FA00138541 /* SofiaPublicTransportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C7E541843E6FA00138541 /* SofiaPublicTransportTests.m */; };
 		1C4C7E601843E7F900138541 /* SPTInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C7E5F1843E7F900138541 /* SPTInitialViewController.m */; };
+		1CD723FD1843EE71006D7D94 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD723FA1843EE71006D7D94 /* HTMLNode.m */; };
+		1CD723FE1843EE71006D7D94 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD723FC1843EE71006D7D94 /* HTMLParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		1C4C7E541843E6FA00138541 /* SofiaPublicTransportTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SofiaPublicTransportTests.m; sourceTree = "<group>"; };
 		1C4C7E5E1843E7F900138541 /* SPTInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTInitialViewController.h; sourceTree = "<group>"; };
 		1C4C7E5F1843E7F900138541 /* SPTInitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTInitialViewController.m; sourceTree = "<group>"; };
+		1CD723F91843EE71006D7D94 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
+		1CD723FA1843EE71006D7D94 /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
+		1CD723FB1843EE71006D7D94 /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
+		1CD723FC1843EE71006D7D94 /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,11 +120,11 @@
 			children = (
 				1C4C7E381843E6FA00138541 /* SPTAppDelegate.h */,
 				1C4C7E391843E6FA00138541 /* SPTAppDelegate.m */,
-				1C4C7E3B1843E6FA00138541 /* Main.storyboard */,
+				1CD723FF1843EE81006D7D94 /* Model */,
+				1CD724001843EE8B006D7D94 /* View */,
+				1CD724011843EE96006D7D94 /* Controller */,
 				1C4C7E411843E6FA00138541 /* Images.xcassets */,
 				1C4C7E301843E6FA00138541 /* Supporting Files */,
-				1C4C7E5E1843E7F900138541 /* SPTInitialViewController.h */,
-				1C4C7E5F1843E7F900138541 /* SPTInitialViewController.m */,
 			);
 			path = SofiaPublicTransport;
 			sourceTree = "<group>";
@@ -150,6 +156,42 @@
 				1C4C7E511843E6FA00138541 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1CD723F81843EE5C006D7D94 /* HTML Parser */ = {
+			isa = PBXGroup;
+			children = (
+				1CD723F91843EE71006D7D94 /* HTMLNode.h */,
+				1CD723FA1843EE71006D7D94 /* HTMLNode.m */,
+				1CD723FB1843EE71006D7D94 /* HTMLParser.h */,
+				1CD723FC1843EE71006D7D94 /* HTMLParser.m */,
+			);
+			name = "HTML Parser";
+			sourceTree = "<group>";
+		};
+		1CD723FF1843EE81006D7D94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1CD723F81843EE5C006D7D94 /* HTML Parser */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1CD724001843EE8B006D7D94 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C4C7E3B1843E6FA00138541 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1CD724011843EE96006D7D94 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1C4C7E5E1843E7F900138541 /* SPTInitialViewController.h */,
+				1C4C7E5F1843E7F900138541 /* SPTInitialViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CD723FD1843EE71006D7D94 /* HTMLNode.m in Sources */,
 				1C4C7E3A1843E6FA00138541 /* SPTAppDelegate.m in Sources */,
 				1C4C7E601843E7F900138541 /* SPTInitialViewController.m in Sources */,
 				1C4C7E361843E6FA00138541 /* main.m in Sources */,
+				1CD723FE1843EE71006D7D94 /* HTMLParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +505,7 @@
 				1C4C7E5A1843E6FA00138541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C4C7E5B1843E6FA00138541 /* Build configuration list for PBXNativeTarget "SofiaPublicTransportTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +514,7 @@
 				1C4C7E5D1843E6FA00138541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
