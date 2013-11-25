@@ -21,7 +21,7 @@
 {
     [super viewDidLoad];
     
-    [SPTUpdateManager getListOfStationsForLine:self.lineNumber type:self.lineType completion:^(NSArray *list) {
+    [SPTUpdateManager getListOfStationsForLine:self.lineNumber type:self.lineType completion:^(NSArray *first, NSArray *second) {
         
     }];
 }
