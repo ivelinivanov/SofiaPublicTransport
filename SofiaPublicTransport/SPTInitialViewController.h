@@ -1,5 +1,5 @@
 //
-//  SPTViewController.h
+//  SPTInitialViewController.h
 //  SofiaPublicTransport
 //
 //  Created by Ivelin Ivanov on 11/25/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SPTViewController : UIViewController
+@interface SPTInitialViewController : UIViewController
 
 @end

@@ -1,23 +1,120 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A2093" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="acg-i6-TUE">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Initial View Controller - Линия-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="SPTViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="SPTInitialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DY4-0U-3hd"/>
+                        <viewControllerLayoutGuide type="bottom" id="wLm-LE-y09"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oCo-we-HF4">
+                                <rect key="frame" x="20" y="20" width="280" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Lkc-Uo-Jwt"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Автобус"/>
+                                    <segment title="Тролейбус"/>
+                                    <segment title="Тролей"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cf-UJ-OaS">
+                                <rect key="frame" x="20" y="56" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Qi2-Nf-9I7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZy-Gj-HeV">
+                                <rect key="frame" x="130" y="94" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="cPl-Ee-hIA"/>
+                                    <constraint firstAttribute="height" constant="30" id="q6H-lR-hEh"/>
+                                </constraints>
+                                <state key="normal" title="Търсене">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="L87-xW-0K2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oCo-we-HF4" secondAttribute="trailing" constant="20" id="KVb-1d-Hsr"/>
+                            <constraint firstAttribute="trailing" secondItem="0cf-UJ-OaS" secondAttribute="trailing" constant="20" id="SYo-7T-Tn8"/>
+                            <constraint firstAttribute="centerX" secondItem="tZy-Gj-HeV" secondAttribute="centerX" id="ebw-An-3JK"/>
+                            <constraint firstItem="oCo-we-HF4" firstAttribute="top" secondItem="DY4-0U-3hd" secondAttribute="bottom" constant="20" id="h2x-Ci-Lq7"/>
+                            <constraint firstItem="0cf-UJ-OaS" firstAttribute="top" secondItem="oCo-we-HF4" secondAttribute="bottom" constant="8" id="h5i-5b-XEf"/>
+                            <constraint firstItem="tZy-Gj-HeV" firstAttribute="top" secondItem="0cf-UJ-OaS" secondAttribute="bottom" constant="8" id="ify-Y5-ThL"/>
+                            <constraint firstItem="0cf-UJ-OaS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="vMT-gc-JHP"/>
+                            <constraint firstItem="oCo-we-HF4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="x31-Ve-9IB"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Линия" id="GvU-E8-62j"/>
+                    <connections>
+                        <outlet property="numberTextField" destination="0cf-UJ-OaS" id="gsf-i8-gL0"/>
+                        <outlet property="transportSegmentControl" destination="oCo-we-HF4" id="JFt-RA-Hxf"/>
+                        <segue destination="2gW-fi-5ub" kind="push" identifier="toDirectionViewController" id="BV9-Ye-P90"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="617" y="81"/>
+        </scene>
+        <!--View Controller - Посока-->
+        <scene sceneID="7UV-tD-xEr">
+            <objects>
+                <viewController id="2gW-fi-5ub" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qph-6I-cYS"/>
+                        <viewControllerLayoutGuide type="bottom" id="zei-8Z-oIQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="blR-B1-KHy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Посока" id="rVV-yu-lPp"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eqB-NK-jqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1061" y="81"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MSs-n7-kw3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="acg-i6-TUE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9g9-NY-XG0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="pTU-rX-HGW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VGv-2V-htc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118" y="81"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

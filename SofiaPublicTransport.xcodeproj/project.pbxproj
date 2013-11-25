@@ -14,13 +14,13 @@
 		1C4C7E361843E6FA00138541 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C7E351843E6FA00138541 /* main.m */; };
 		1C4C7E3A1843E6FA00138541 /* SPTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C7E391843E6FA00138541 /* SPTAppDelegate.m */; };
 		1C4C7E3D1843E6FA00138541 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C4C7E3B1843E6FA00138541 /* Main.storyboard */; };
-		1C4C7E401843E6FA00138541 /* SPTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C7E3F1843E6FA00138541 /* SPTViewController.m */; };
 		1C4C7E421843E6FA00138541 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C4C7E411843E6FA00138541 /* Images.xcassets */; };
 		1C4C7E491843E6FA00138541 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4C7E481843E6FA00138541 /* XCTest.framework */; };
 		1C4C7E4A1843E6FA00138541 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4C7E291843E6FA00138541 /* Foundation.framework */; };
 		1C4C7E4B1843E6FA00138541 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4C7E2D1843E6FA00138541 /* UIKit.framework */; };
 		1C4C7E531843E6FA00138541 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C4C7E511843E6FA00138541 /* InfoPlist.strings */; };
 		1C4C7E551843E6FA00138541 /* SofiaPublicTransportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C7E541843E6FA00138541 /* SofiaPublicTransportTests.m */; };
+		1C4C7E601843E7F900138541 /* SPTInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C7E5F1843E7F900138541 /* SPTInitialViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +45,14 @@
 		1C4C7E381843E6FA00138541 /* SPTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPTAppDelegate.h; sourceTree = "<group>"; };
 		1C4C7E391843E6FA00138541 /* SPTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTAppDelegate.m; sourceTree = "<group>"; };
 		1C4C7E3C1843E6FA00138541 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1C4C7E3E1843E6FA00138541 /* SPTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPTViewController.h; sourceTree = "<group>"; };
-		1C4C7E3F1843E6FA00138541 /* SPTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTViewController.m; sourceTree = "<group>"; };
 		1C4C7E411843E6FA00138541 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1C4C7E471843E6FA00138541 /* SofiaPublicTransportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SofiaPublicTransportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C4C7E481843E6FA00138541 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1C4C7E501843E6FA00138541 /* SofiaPublicTransportTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SofiaPublicTransportTests-Info.plist"; sourceTree = "<group>"; };
 		1C4C7E521843E6FA00138541 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1C4C7E541843E6FA00138541 /* SofiaPublicTransportTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SofiaPublicTransportTests.m; sourceTree = "<group>"; };
+		1C4C7E5E1843E7F900138541 /* SPTInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTInitialViewController.h; sourceTree = "<group>"; };
+		1C4C7E5F1843E7F900138541 /* SPTInitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTInitialViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +115,10 @@
 				1C4C7E381843E6FA00138541 /* SPTAppDelegate.h */,
 				1C4C7E391843E6FA00138541 /* SPTAppDelegate.m */,
 				1C4C7E3B1843E6FA00138541 /* Main.storyboard */,
-				1C4C7E3E1843E6FA00138541 /* SPTViewController.h */,
-				1C4C7E3F1843E6FA00138541 /* SPTViewController.m */,
 				1C4C7E411843E6FA00138541 /* Images.xcassets */,
 				1C4C7E301843E6FA00138541 /* Supporting Files */,
+				1C4C7E5E1843E7F900138541 /* SPTInitialViewController.h */,
+				1C4C7E5F1843E7F900138541 /* SPTInitialViewController.m */,
 			);
 			path = SofiaPublicTransport;
 			sourceTree = "<group>";
@@ -251,8 +251,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C4C7E3A1843E6FA00138541 /* SPTAppDelegate.m in Sources */,
+				1C4C7E601843E7F900138541 /* SPTInitialViewController.m in Sources */,
 				1C4C7E361843E6FA00138541 /* main.m in Sources */,
-				1C4C7E401843E6FA00138541 /* SPTViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
