@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SofiaPublicTransport.xcodeproj">
+      location = "self:SPT.xcodeproj">
    </FileRef>
 </Workspace>
