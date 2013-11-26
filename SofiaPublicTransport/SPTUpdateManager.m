@@ -100,4 +100,33 @@
     });
 }
 
++ (void)getTimeForStation:(SPTStation *)station type:(NSUInteger)type completion:(void (^)(NSString *))completion
+{
+    NSString *stationsURL = [NSString stringWithFormat:@"http://m.sofiatraffic.bg/schedules/vehicle-vt?s=%@&lid=%@&vt=%d&rid=%@", station.code, station.lid, type + 1, station.rid];
+    NSURL *url = [NSURL URLWithString:stationsURL];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        NSString *html = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSError *error = nil;
+        
+        NSLog(@"%@", html);
+        
+        HTMLParser *parser = [[HTMLParser alloc] initWithString:html error:&error];
+        
+        HTMLNode *bodyNode = [parser body];
+        
+        NSArray *boldNodes = [bodyNode findChildTags:@"b"];
+        
+        NSString *msg = [(HTMLNode *)[boldNodes objectAtIndex:3] contents];
+        
+        NSLog(@"%@", msg);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completion(msg);
+        });
+    });
+
+}
+
 @end
