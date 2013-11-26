@@ -11,6 +11,6 @@
 
 @interface SPTUpdateManager : NSObject
 
-+ (void)getListOfStationsForLine:(NSString *)line type:(NSUInteger)type completion:(void(^)(NSArray *first, NSArray *second))completion;
++ (void)getListOfStationsForLine:(NSString *)line type:(NSUInteger)type completion:(void(^)(NSString *forward, NSArray *first, NSString *backward, NSArray *second))completion;
 
 @end

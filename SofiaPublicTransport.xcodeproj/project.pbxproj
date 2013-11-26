@@ -26,6 +26,7 @@
 		1CD723FE1843EE71006D7D94 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD723FC1843EE71006D7D94 /* HTMLParser.m */; };
 		1CD724041843EFD0006D7D94 /* SPTDirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD724031843EFD0006D7D94 /* SPTDirectionViewController.m */; };
 		1CD724061843F1DA006D7D94 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD724051843F1DA006D7D94 /* libxml2.dylib */; };
+		55147D7B1844944C00627067 /* SPTStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 55147D7A1844944C00627067 /* SPTStation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		1CD724021843EFD0006D7D94 /* SPTDirectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTDirectionViewController.h; sourceTree = "<group>"; };
 		1CD724031843EFD0006D7D94 /* SPTDirectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTDirectionViewController.m; sourceTree = "<group>"; };
 		1CD724051843F1DA006D7D94 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		55147D791844944C00627067 /* SPTStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTStation.h; sourceTree = "<group>"; };
+		55147D7A1844944C00627067 /* SPTStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTStation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,8 @@
 				1CD723F81843EE5C006D7D94 /* HTML Parser */,
 				1C26072E1843F3C200466172 /* SPTUpdateManager.h */,
 				1C26072F1843F3C200466172 /* SPTUpdateManager.m */,
+				55147D791844944C00627067 /* SPTStation.h */,
+				55147D7A1844944C00627067 /* SPTStation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55147D7B1844944C00627067 /* SPTStation.m in Sources */,
 				1C2607301843F3C200466172 /* SPTUpdateManager.m in Sources */,
 				1CD724041843EFD0006D7D94 /* SPTDirectionViewController.m in Sources */,
 				1CD723FD1843EE71006D7D94 /* HTMLNode.m in Sources */,

@@ -10,6 +10,14 @@
 #import "SPTUpdateManager.h"
 
 @interface SPTDirectionViewController ()
+{
+    NSArray *forwardDirectionStations;
+    NSArray *backwardDirectionStations;
+    NSString *forwardDirectionName;
+    NSString *backwardDirectionName;
+}
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -21,8 +29,15 @@
 {
     [super viewDidLoad];
     
-    [SPTUpdateManager getListOfStationsForLine:self.lineNumber type:self.lineType completion:^(NSArray *first, NSArray *second) {
+    [self.activityIndicator startAnimating];
+    
+    [SPTUpdateManager getListOfStationsForLine:self.lineNumber type:self.lineType completion:^(NSString *forward, NSArray *first, NSString *backward, NSArray *second) {
+        forwardDirectionName = forward;
+        backwardDirectionName = backward;
+        forwardDirectionStations = first;
+        backwardDirectionStations = second;
         
+        [self.activityIndicator stopAnimating];
     }];
 }
 
