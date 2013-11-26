@@ -92,6 +92,7 @@
     }
     
     [self.stationPickerView reloadAllComponents];
+    [self.stationPickerView selectRow:0 inComponent:0 animated:YES];
 }
 
 - (IBAction)getTimeOfArrivalPressed:(id)sender
