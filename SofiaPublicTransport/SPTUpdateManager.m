@@ -95,7 +95,14 @@
         NSLog(@"%d %d", forwardStations.count, backwardStations.count);
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            completion(forwardDirectionName, forwardStations, backwardDirectionName, backwardStations);
+            if ([forwardStations count] <= 3 || [backwardStations count] <=3)
+            {
+                completion(nil,nil,nil,nil);
+            }
+            else
+            {
+                completion(forwardDirectionName, forwardStations, backwardDirectionName, backwardStations);
+            }
         });
     });
 }

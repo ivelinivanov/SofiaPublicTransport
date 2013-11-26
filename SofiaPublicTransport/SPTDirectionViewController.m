@@ -10,7 +10,7 @@
 #import "SPTUpdateManager.h"
 #import "SPTStation.h"
 
-@interface SPTDirectionViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface SPTDirectionViewController () <UIPickerViewDataSource, UIPickerViewDelegate, UIAlertViewDelegate>
 {
     NSArray *forwardDirectionStations;
     NSArray *backwardDirectionStations;
@@ -37,15 +37,24 @@
     [super viewDidLoad];
     
     [SPTUpdateManager getListOfStationsForLine:self.lineNumber type:self.lineType completion:^(NSString *forward, NSArray *first, NSString *backward, NSArray *second) {
-        forwardDirectionName = forward;
-        backwardDirectionName = backward;
-        forwardDirectionStations = first;
-        backwardDirectionStations = second;
-        
-        self.directionNameLabel.text = forwardDirectionName;
-        pickerDataSource = first;
-        
-        [self.stationPickerView reloadAllComponents];
+        if (forward && backward && first && second)
+        {
+            forwardDirectionName = forward;
+            backwardDirectionName = backward;
+            forwardDirectionStations = first;
+            backwardDirectionStations = second;
+            
+            self.directionNameLabel.text = forwardDirectionName;
+            pickerDataSource = first;
+            
+            [self.stationPickerView reloadAllComponents];
+        }
+        else
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Упс!" message:@"Няма данни за тази линия!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
+            
+        }
     }];
 }
 
@@ -99,5 +108,12 @@
                                              otherButtonTitles: nil];
         [alert show];
     }];
+}
+
+#pragma mark - AlertView Delegate
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end
